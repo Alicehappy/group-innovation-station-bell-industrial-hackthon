@@ -1,0 +1,29 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/animations' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+.header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: map-get($colors-primary, global-background);
+
+    &__logo {
+        padding: 1rem;
+        width: 10rem;
+    }
+
+    &__nav {
+        gap: 1rem;
+        color: white;
+        display: flex;
+
+        :hover {
+            text-decoration: underline;
+            opacity: .8;
+        }
+    }
+}
