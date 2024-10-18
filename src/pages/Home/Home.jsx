@@ -16,8 +16,6 @@ function Home() {
     const loadTestimonials = async () => {
       try {
         const testimonialsData = await getTestimonials();
-        console.log("testimonials");
-        console.log(testimonialsData);
         setTestimonials(testimonialsData);
       } catch (error) {
         setError(error.message);
