@@ -1,8 +1,8 @@
-@use '../../styles/partials/global' as *;
-@use '../../styles/partials/animations' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/typography' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/animations" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .events-cards {
   background-color: white;
@@ -24,7 +24,7 @@
   padding: 2rem;
 
   &__title {
-    color: #FFFFFF;
+    color: #ffffff;
     font-family: BellFonts;
     text-align: left;
     margin-bottom: 2rem;
@@ -59,6 +59,7 @@
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    border: none;
 
     &:hover {
       background-color: #8ab5e33b;
