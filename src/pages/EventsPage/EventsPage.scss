@@ -1,8 +1,7 @@
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/partials/variables" as *;
+// @use "../../styles/partials/mixins" as *;
+// @use "../../styles/partials/variables" as *;
 
-.card {
-  @include card;
-  width: $size-default * 18.75;
-  height: $size-default * 12.5;
-}
+// .card {
+//   width: $size-default * 18.75;
+//   height: $size-default * 12.5;
+// }
