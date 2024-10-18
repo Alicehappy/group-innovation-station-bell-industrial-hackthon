@@ -5,6 +5,7 @@ import EventsPage from "./pages/EventsPage/EventsPage.jsx";
 import TherapyPage from "./pages/TherapyPage/TherapyPage.jsx";
 import GroupPage from "./pages/GroupPage/GroupPage.jsx";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Page404 from "./pages/Page404/Page404";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/group/:id" element={<GroupPage />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

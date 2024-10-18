@@ -1,0 +1,28 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials//mixins" as *;
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: map-get($colors-primary, global-background);
+  height: $size-default * 8;
+  color: map-get($colors-primary, global-white);
+
+  @include tablet {
+    flex-direction: row;
+    gap: $size-default * 0.25;
+    height: $size-default * 5;
+  }
+
+  &-text:first-child {
+    @include tablet {
+      &::after {
+        content: "|";
+        margin-left: $size-default * 0.25;
+      }
+    }
+  }
+}
