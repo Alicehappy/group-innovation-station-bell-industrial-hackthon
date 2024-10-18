@@ -1,8 +1,39 @@
-@use "../../styles/partials/mixins" as *;
-@use "../../styles/partials/variables" as *;
+.home {
+    background: linear-gradient(90deg, #0067a5, #5271ff);
+}
+
+.home__cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
 
 .card {
-  @include card;
-  width: $size-default * 18.75;
-  height: $size-default * 12.5;
+    width: 250px;
+    padding: 20px;
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card__title {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .card__description {
+        font-size: 1rem;
+        color: gray;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
 }
