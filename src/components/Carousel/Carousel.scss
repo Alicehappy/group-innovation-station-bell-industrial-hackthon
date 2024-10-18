@@ -1,9 +1,19 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/animations' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
 .carousel-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px 0;
+
+    @include tablet {
+        max-width: 1200px;
+    }
 }
 
 .carousel {
