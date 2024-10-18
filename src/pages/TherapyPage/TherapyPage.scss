@@ -13,10 +13,23 @@
   font-weight: 300;
 }
 
+.anilogo {
+  display: flex;
+  flex-direction: column;
+}
+
+.anilogo-img {
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+}
+
+.anilogo-gif {
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+}
+
 .anilogo img {
   width: 19rem;
-  padding-top: 2rem;
-  border-radius: 18px;
 }
 
 // Mobile-first styles

@@ -7,13 +7,13 @@ function GroupPage() {
   const { id } = useParams();
   const [group, setGroup] = useState({});
 
-  const fetchWarehouses = async () => {
+  const fetchGroups = async () => {
     const response = await getGroup(id);
     setGroup(response);
   };
 
   useEffect(() => {
-    fetchWarehouses();
+    fetchGroups();
   }, []);
 
   return (

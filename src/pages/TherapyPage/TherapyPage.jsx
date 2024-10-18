@@ -5,6 +5,7 @@ import GroupPage from "../GroupPage/GroupPage.jsx";
 import { useNavigate } from "react-router-dom";
 import Error from "../../components/Error/Error";
 import bellGif from '../../assets/logos/anibell.gif'
+import help from '../../assets/images/help.avif'
 
 function TherapyPage() {
   const [employeeId, setEmployeeId] = useState("");
@@ -62,11 +63,12 @@ function TherapyPage() {
         <p className="get">Welcome to Employee Care!        </p>
         <p className="get-touch">Book a group session today with one of our mental health experts today</p>
         <div className="anilogo">
-          <img src={bellGif} alt="Animated Bell Logo"></img>
+          <img className="anilogo-img" src={help} alt="help image"></img>
+          <img className="anilogo-gif" src={bellGif} alt="Animated Bell Logo"></img>
         </div>
       </div>
       <div className="employee-form__container">
-        <h2 className="employee-form__title">Reserve your spot today!</h2>
+        <h2 className="employee-form__title">Reserve your spot!</h2>
         <form onSubmit={handleSubmit} className="employee-form__form">
           <label className="employee-form__label" htmlFor="employeeId">
             Employee ID:

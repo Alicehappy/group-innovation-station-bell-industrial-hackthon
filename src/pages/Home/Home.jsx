@@ -8,6 +8,7 @@ import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import BlogSection from "../../components/BlogSection/BlogSection";
+import ExpertSection from "../../components/ExpertSection/ExpertSection";
 
 function Home() {
   const [testimonials, setTestimonials] = useState([]);
@@ -61,8 +62,9 @@ function Home() {
           image="../../src/assets/images/Bell-giving.jpg"
         />
       </Carousel>
-      <BlogSection />
+      <ExpertSection />
       {testimonials ? <Testimonials testimonials={testimonials} /> : <Loading />}
+      <BlogSection />
     </div>
   );
 }
