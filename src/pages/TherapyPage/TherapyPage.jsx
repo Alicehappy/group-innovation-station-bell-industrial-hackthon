@@ -3,19 +3,20 @@ import { useState } from "react";
 import { postUser } from "../../services/employee-api";
 import GroupPage from "../GroupPage/GroupPage.jsx";
 import { useNavigate } from "react-router-dom";
+import Error from "../../components/Error/Error";
 
 function TherapyPage() {
   const [employeeId, setEmployeeId] = useState("");
   const [name, setName] = useState("");
   const [jobTitle, setJobTitle] = useState("");
   const [concern, setConcern] = useState("");
-  const [group, setGroup] = useState(""); // New state for group selection
+  const [group, setGroup] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Determine group ID based on selected group
     const groupMapping = {
       "Work Stress": 1,
       "Family Issues": 2,
@@ -24,22 +25,20 @@ function TherapyPage() {
       "Self-Esteem & Confidence": 5,
     };
 
-    const groupId = groupMapping[group] || null; // Assign null if the group is not found
+    const groupId = groupMapping[group] || null;
 
     const submissionData = {
       "employee-id": employeeId,
       name: name,
       "job-title": jobTitle,
       group: group,
-      "group-id": groupId, // This is where the selected group ID is included
+      "group-id": groupId,
       concern: concern,
     };
 
     try {
-      const response = await postUser(submissionData);
-      console.log("Submission response:", response.data);
+      await postUser(submissionData);
 
-      // Clear the form
       setEmployeeId("");
       setName("");
       setJobTitle("");
@@ -48,9 +47,13 @@ function TherapyPage() {
 
       navigate(`/group/${groupId}`);
     } catch (error) {
-      console.error("Error submitting data:", error);
+      setError("Error submitting data:", error);
     }
   };
+
+  if (error) {
+    return <Error error={error} />;
+  }
 
   return (
     <div className="employee-form">
