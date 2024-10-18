@@ -24,7 +24,7 @@ function GroupPage() {
         <p className="group__welcome">Welcome!</p>
         <p className="group__welcome">
           We are so glad to have you join the {group.group} group therapy
-          sessions. This is a safe and supportive spave where you can connect
+          sessions. This is a safe and supportive space where you can connect
           with others who share similar experiences, and access the support of
           an experienced therapist. We understand that facing personal
           challenges can be difficult, and we are here to help you navigate this
@@ -34,32 +34,32 @@ function GroupPage() {
       </section>
 
       <h2 className="group__group">Your Group:</h2>
+      <section className="group__paragraphs">
+        <div className="group__line">
+          <h3 className="group__key">Group:</h3>
+          <p className="group__value">{group.group}</p>
+        </div>
 
-      <div className="group__line">
-        <h3 className="group__key">Group:</h3>
-        <p className="group__value">{group.group}</p>
-      </div>
+        <div className="group__line">
+          <h3 className="group__key">Therapist:</h3>
+          <p className="group__value">{group.therapist}</p>
+        </div>
 
-      <div className="group__line">
-        <h3 className="group__key">Therapist:</h3>
-        <p className="group__value">{group.therapist}</p>
-      </div>
+        <div className="group__line">
+          <h3 className="group__key">About Your Group:</h3>
+          <p className="group__value">{group.description}</p>
+        </div>
 
-      <div className="group__line">
-        <h3 className="group__key">About Your Group:</h3>
-        <p className="group__value">{group.description}</p>
-      </div>
+        <div className="group__line">
+          <h3 className="group__key">Session Days:</h3>
+          <p className="group__value">{group.day}</p>
+        </div>
 
-      <div className="group__line">
-        <h3 className="group__key">Session Days:</h3>
-        <p className="group__value">{group.day}</p>
-      </div>
-
-      <div className="group__line">
-        <h3 className="group__key">Session Times:</h3>
-        <p className="group__value">6:30 pm</p>
-      </div>
-
+        <div className="group__line">
+          <h3 className="group__key">Session Times:</h3>
+          <p className="group__value">6:30 pm</p>
+        </div>
+      </section>
       <Link to="/" className="group__link">
         <p className="group__link-para">Go to Home Page</p>
       </Link>
