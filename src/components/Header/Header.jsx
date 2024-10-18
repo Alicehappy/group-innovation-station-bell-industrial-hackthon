@@ -1,7 +1,8 @@
 import "./Header.scss";
+import React from "react";
+import { Link } from "react-router-dom";
 import bellTalk from "../../assets/icons/bell-talk.svg";
 import bellHero from "../../assets/images/BellICon.webp";
-import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
