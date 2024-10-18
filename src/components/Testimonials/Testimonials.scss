@@ -1,0 +1,10 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.testimonial-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  @include responpsive-margin;
+}

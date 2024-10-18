@@ -97,3 +97,15 @@
     background-color: map-get($colors-primary, global-background);
   }
 }
+
+@mixin responpsive-margin {
+  margin: 0 $size-default;
+
+  @include tablet {
+    margin: 0 $size-default * 1.5;
+  }
+
+  @include desktop {
+    margin: 0 $size-default * 8;
+  }
+}

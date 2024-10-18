@@ -2,8 +2,34 @@ import "./Home.scss";
 import Hero from "../../components/Hero/Hero";
 import Card from "../../components/Card/Card";
 import Carousel from "../../components/Carousel/Carousel";
+import { getTestimonials } from "../../services/testimonials-api";
+import { useEffect, useState } from "react";
+import Error from "../../components/Error/Error";
+import Loading from "../../components/Loading/Loading";
+import Testimonials from "../../components/Testimonials/Testimonials";
 
 function Home() {
+  const [testimonials, setTestimonials] = useState([]);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const loadTestimonials = async () => {
+      try {
+        const testimonialsData = await getTestimonials();
+        console.log("testimonials");
+        console.log(testimonialsData);
+        setTestimonials(testimonialsData);
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+    loadTestimonials();
+  }, []);
+
+  if (error) {
+    return <Error error={error} />;
+  }
+
   return (
     <div className="home">
       <Hero />
@@ -34,6 +60,8 @@ function Home() {
           image="../../src/assets/images/Bell-giving.jpg"
         />
       </Carousel>
+
+      {testimonials ? <Testimonials testimonials={testimonials} /> : <Loading/>}
     </div>
   );
 }
