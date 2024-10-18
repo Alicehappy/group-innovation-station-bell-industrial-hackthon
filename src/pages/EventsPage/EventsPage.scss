@@ -1,8 +1,8 @@
-@use '../../styles/partials/global' as *;
-@use '../../styles/partials/animations' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/typography' as *;
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/animations" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
 
 .events-cards {
   font-size: small;
@@ -37,7 +37,7 @@
 
   &__title {
     font-weight: 200;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: left;
     margin-bottom: 2rem;
   }
@@ -58,7 +58,6 @@
     }
   }
 
-
   &__card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -67,7 +66,7 @@
 
   &__card-description {
     margin: 5px 0;
-    opacity: .7;
+    opacity: 0.7;
   }
 
   &__card-link {
@@ -79,6 +78,7 @@
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    border: none;
 
     &:hover {
       background-color: #8ab5e33b;

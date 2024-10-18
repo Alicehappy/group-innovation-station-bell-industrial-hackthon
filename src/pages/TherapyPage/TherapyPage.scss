@@ -1,8 +1,8 @@
-@use '../../styles/partials/global' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/animations' as *;
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/typography' as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/animations" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
 
 .get {
   font-weight: 700;
@@ -14,6 +14,7 @@
   border-radius: 18px;
 }
 
+// Mobile-first styles
 .employee-form {
   height: 100vh;
   background: linear-gradient(90deg, #0067a5, #5271ff);
@@ -61,11 +62,10 @@
   &__form {
     display: flex;
     flex-direction: column;
-
   }
 
   &__label {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
 
   &__input {
