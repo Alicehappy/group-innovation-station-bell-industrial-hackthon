@@ -22,17 +22,17 @@ const EventsPage = () => {
 
   const handleRegisterClick = () => {
     toast.success("Thank you for registering!", {
-      position: "top-center", // This positions the toast at the top center of the screen
-      autoClose: 1500, // Optional: closes the toast after 2 seconds
-      hideProgressBar: true, // Optional: hides the progress bar
-      closeOnClick: true, // Optional: allows users to close it manually
-      pauseOnHover: false, // Optional: disable pausing on hover
-      draggable: false, // Optional: disable drag
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
     });
 
     setTimeout(() => {
       navigate("/");
-    }, 2000); // Match the timeout to the toast autoClose time for smooth transition
+    }, 2000);
   };
 
   return (
