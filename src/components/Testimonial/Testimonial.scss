@@ -1,0 +1,73 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.testimonial-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: $border-default;
+  padding: $size-default;
+
+  background-color: map-get($colors-secondary, card-background);
+  border-radius: $size-tiny * 2;
+  margin-bottom: $size-tiny * 2;
+
+  @include desktop {
+    padding: $size-default * 1.5 0;
+  }
+
+  &__avatar {
+    background-size: $size-default * 4;
+    height: $size-default * 2.25;
+    width: $size-default * 2.25;
+    background-position: 15% 50%;
+    border-radius: 50%;
+    margin-top: $size-default * 1.4;
+    background-color: #e5e5e5;
+
+    @include tablet {
+      height: $size-default * 2.5;
+      width: $size-default * 2.5;
+      margin: 0 0 $size-default * 0.4;
+    }
+
+    &--image {
+      background-image: url("../../assets/images/Mohan-muruge.jpg");
+    }
+  }
+
+  &__details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: calc(100% - $size-default * 3.125);
+
+    @include desktop {
+      width: calc(100% - $size-default * 6.8);
+      margin-right: $size-default * 1.5;
+    }
+  }
+
+  &__details {
+    &--name {
+      font-weight: 600;
+      width: 50%;
+      margin: 0;
+      margin-bottom: $size-tiny;
+    }
+
+    &--location {
+      color: map-get($colors-secondary, column-headers);
+      width: 50%;
+      margin: 0;
+      text-align: end;
+    }
+
+    &--comment {
+      margin: 0;
+      font-style: italic;
+      @include desktop {
+        padding-top: $size-default * 0.4;
+      }
+    }
+  }
+}

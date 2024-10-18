@@ -5,6 +5,8 @@ import Carousel from "../../components/Carousel/Carousel";
 import { getTestimonials } from "../../services/testimonials-api";
 import { useEffect, useState } from "react";
 import Error from "../../components/Error/Error";
+import Loading from "../../components/Loading/Loading";
+import Testimonials from "../../components/Testimonials/Testimonials";
 
 function Home() {
   const [testimonials, setTestimonials] = useState([]);
@@ -59,7 +61,7 @@ function Home() {
         />
       </Carousel>
 
-      <section className="home__testimonials"></section>
+      {testimonials ? <Testimonials testimonials={testimonials} /> : <Loading/>}
     </div>
   );
 }
