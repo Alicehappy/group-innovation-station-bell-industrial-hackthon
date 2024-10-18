@@ -10,6 +10,8 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 import BlogSection from "../../components/BlogSection/BlogSection";
 import ExpertSection from "../../components/ExpertSection/ExpertSection";
 
+const PUBLIC_URL = import.meta.env.VITE_PUBLIC_URL;
+
 function Home() {
   const [testimonials, setTestimonials] = useState([]);
   const [error, setError] = useState("");
@@ -18,8 +20,6 @@ function Home() {
     const loadTestimonials = async () => {
       try {
         const testimonialsData = await getTestimonials();
-        console.log("testimonials");
-        console.log(testimonialsData);
         setTestimonials(testimonialsData);
       } catch (error) {
         setError(error.message);
@@ -39,31 +39,35 @@ function Home() {
         <Card
           title="Mental Health Leadership"
           description="Supporting over 6.9 million Canadians through Bell Let's Talk."
-          image="../../src/assets/images/bell-card.avif"
+          image={`${PUBLIC_URL}/images/bell-card.avif`}
         />
         <Card
           title="Environmental Sustainability"
           description="Committed to carbon neutral operations by 2025 and recycling over 16.5M devices."
-          image="../../src/assets/images/Bell-Enviro.png"
+          image={`${PUBLIC_URL}/images/Bell-Enviro.png`}
         />
         <Card
           title="Connecting Remote Communities"
           description="Investing nearly $19 billion to expand high-speed internet to rural Canada."
-          image="../../src/assets/images/Bell-connect.png"
+          image={`${PUBLIC_URL}/images/Bell-connect.png`}
         />
         <Card
           title="Innovation and Research"
           description="Investing $500M annually in R&D for a better, more connected future."
-          image="../../src/assets/images/Bell-Research.jpg"
+          image={`${PUBLIC_URL}/images/Bell-Research.jpg`}
         />
         <Card
           title="Community Giving"
           description="Bell employees donated $2.6M to charities, matched by $1.8M from Bell."
-          image="../../src/assets/images/Bell-giving.jpg"
+          image={`${PUBLIC_URL}/images/Bell-giving.jpg`}
         />
       </Carousel>
       <ExpertSection />
-      {testimonials ? <Testimonials testimonials={testimonials} /> : <Loading />}
+      {testimonials ? (
+        <Testimonials testimonials={testimonials} />
+      ) : (
+        <Loading />
+      )}
       <BlogSection />
     </div>
   );

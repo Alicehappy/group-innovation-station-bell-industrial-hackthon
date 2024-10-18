@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5050";
+const BASE_URL = import.meta.env.VITE_PUBLIC_URL;
 
 export async function getEvents() {
     const url = `${BASE_URL}/events`;

@@ -11,6 +11,9 @@
   border-radius: $size-tiny * 2;
   margin-bottom: $size-tiny * 2;
 
+  @include desktop {
+    padding: $size-default * 1.5;
+  }
 
   &__avatar {
     background-size: $size-default * 4;
