@@ -1,0 +1,20 @@
+h1 {
+    color: white;
+}
+
+.page404 {
+    text-align: center;
+    padding: 2rem;
+    color: #0067a5;
+    background: linear-gradient(90deg, #0067a5, #5271ff);
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

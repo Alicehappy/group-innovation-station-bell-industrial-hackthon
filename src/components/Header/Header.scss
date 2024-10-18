@@ -5,11 +5,11 @@
 @use '../../styles/partials/typography' as *;
 
 .header {
-    padding: 1rem;
+    padding: 1rem 15rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: map-get($colors-primary, global-background);
+    background: linear-gradient(90deg, #0067a5, #5271ff);
 
     &__logo {
         padding: 1rem;
