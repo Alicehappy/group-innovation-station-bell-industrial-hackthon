@@ -4,7 +4,7 @@
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/variables' as *;
 
-.hello {
+.events-cards {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -12,11 +12,10 @@
   max-width: 900px;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  // transition: transform;
 
   &:hover {
     transform: scale(1.05);
-    background-color: #aed6f4;
+    background-color: #c8e0f3;
   }
 }
 
@@ -44,6 +43,7 @@
   &__card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: #0067a5;
   }
 
   &__card-description {
