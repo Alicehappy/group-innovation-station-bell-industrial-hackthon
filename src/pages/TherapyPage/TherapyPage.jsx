@@ -1,7 +1,8 @@
 import "./TherapyPage.scss";
 import { useState } from "react";
 import { postUser } from "../../services/employee-api";
-import GroupPage from "../GroupPage/GroupPage";
+import GroupPage from "../GroupPage/GroupPage.jsx";
+import { useNavigate } from "react-router-dom";
 import Error from "../../components/Error/Error";
 
 function TherapyPage() {
@@ -11,6 +12,7 @@ function TherapyPage() {
   const [concern, setConcern] = useState("");
   const [group, setGroup] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -42,15 +44,15 @@ function TherapyPage() {
       setJobTitle("");
       setConcern("");
       setGroup("");
+
+      navigate(`/group/${groupId}`);
     } catch (error) {
       setError("Error submitting data:", error);
     }
-
-    return <GroupPage name={name} id={groupId} />;
   };
 
   if (error) {
-    return <Error error={error}/>;
+    return <Error error={error} />;
   }
 
   return (
