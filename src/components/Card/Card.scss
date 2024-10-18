@@ -1,0 +1,37 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/animations' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+
+    &__content {
+        padding: 20px;
+        height: 40%;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: #666;
+    }
+}

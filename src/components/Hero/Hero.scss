@@ -1,0 +1,38 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/animations' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/typography' as *;
+@use '../../styles/partials/variables' as *;
+
+.hero {
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero__cta {
+        background-color: white;
+        color: #0067a5;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #b0becc;
+        }
+    }
+}

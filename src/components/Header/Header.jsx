@@ -11,7 +11,6 @@ const Header = () => {
             <div className='header__nav'>
                 <a className='header__nav-home'>Home</a>
                 <a className='header__nav-resources'>Events</a>
-                <a className='header__nav-support'>Resources</a>
                 <a className='header__nav-support'>Support</a>
             </div>
         </div>
