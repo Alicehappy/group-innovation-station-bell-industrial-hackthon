@@ -33,8 +33,9 @@ function GroupPage() {
         </p>
       </section>
 
-      <h2 className="group__group">Your Group:</h2>
       <section className="group__paragraphs">
+        <h2 className="group__group">Your Group:</h2>
+
         <div className="group__line">
           <h3 className="group__key">Group:</h3>
           <p className="group__value">{group.group}</p>
