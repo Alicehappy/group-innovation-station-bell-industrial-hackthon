@@ -21,16 +21,16 @@ const EventsPage = () => {
       <h1 className="events__title">Upcoming Events</h1>
       <div className="events__list">
         {events.map((event) => (
-          <div className="event__card" key={event.id}>
+          <div className="hello" key={event.id}>
             <h2 className="events__card-title">{event.name}</h2>
             <p className="events__card-date">{event.date} - {event.time}</p>
             <p className="events__card-location">Location: {event.location.venue}, {event.location.city}</p>
             <p className="events__card-description">{event.description}</p>
-            <a 
-            className="events__card-link"
-            href={event.registration_link} 
-            target="_blank" 
-            rel="noopener noreferrer"
+            <a
+              className="events__card-link"
+              href={event.registration_link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Register
             </a>
