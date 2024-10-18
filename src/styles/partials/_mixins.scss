@@ -15,7 +15,10 @@
 @mixin h1 {
   font-size: $size-default * 1.75;
   line-height: $size-default * 2.25;
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
   @media (min-width: $min-tablet-breakpoint) {
     font-size: $size-default * 2;
     line-height: $size-default * 2.5;
@@ -25,7 +28,10 @@
 @mixin h2 {
   font-size: $size-default * 1.25;
   line-height: $size-default * 1.75;
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop
   @media (min-width: $min-tablet-breakpoint) {
     font-size: $size-default * 1.5;
     line-height: $size-default * 2;
@@ -35,6 +41,7 @@
 @mixin h3 {
   font-size: $size-default * 0.8125;
   line-height: $size-default * 1.25;
+<<<<<<< HEAD
 
   @media (min-width: $min-tablet-breakpoint) {
     font-size: $size-default * 0.875;
@@ -83,3 +90,69 @@
     line-height: $size-default * 1.125;
   }
 }
+=======
+  @media (min-width: $min-tablet-breakpoint) {
+    font-size: $size-default * 0.875;
+    line-height: $size-default * 1.375;
+  }
+}
+
+@mixin h4 {
+  font-size: $size-default * 0.6875;
+  line-height: $size-default * 1;
+  font-weight: 600;
+  color: map-get($colors-secondary, column-headers);
+  @media (min-width: $min-tablet-breakpoint) {
+    font-size: $size-default * 0.75;
+    line-height: $size-default * 1.125;
+  }
+}
+
+@mixin p1 {
+  font-size: $size-default * 0.9375;
+  line-height: $size-default * 1.625;
+  @media (min-width: $min-tablet-breakpoint) {
+    font-size: $size-default * 1;
+    line-height: $size-default * 1.75;
+  }
+}
+
+@mixin p2 {
+  font-size: $size-default * 0.8125;
+  line-height: $size-default * 1.25;
+  @media (min-width: $min-tablet-breakpoint) {
+    font-size: $size-default * 0.875;
+    line-height: $size-default * 1.375;
+  }
+}
+
+@mixin p3 {
+  font-size: $size-default * 0.6875;
+  line-height: $size-default * 1;
+  @media (min-width: $min-tablet-breakpoint) {
+    font-size: $size-default * 0.75;
+    line-height: $size-default * 1.125;
+  }
+}
+
+@mixin card(
+  $bg-color: #f4f4f4,
+  $border-radius: $size-tiny * 2,
+  $box-shadow: 0 $size-tiny $size-tiny * 1.5 rgba(0, 0, 0, 0.1),
+  $padding: $size-default * 1.5,
+  $margin: 1rem,
+  $transition: 0.3s ease-in-out
+) {
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: $padding;
+  margin: $margin;
+  transition: box-shadow $transition;
+
+  &:hover {
+    box-shadow: 0 $size-tiny * 1.5 $size-tiny * 3 rgba(0, 0, 0, 0.15);
+    background-color: map-get($colors-primary, global-background);
+  }
+}
+>>>>>>> develop
