@@ -1,6 +1,7 @@
-import axios from "axios";
 import "./TherapyPage.scss";
 import { useState } from "react";
+import { postUser } from "../../services/employee-api";
+import GroupPage from "../GroupPage/GroupPage";
 
 function TherapyPage() {
   const [employeeId, setEmployeeId] = useState("");
@@ -8,8 +9,6 @@ function TherapyPage() {
   const [jobTitle, setJobTitle] = useState("");
   const [concern, setConcern] = useState("");
   const [group, setGroup] = useState(""); // New state for group selection
-  const url = import.meta.env.VITE_URL;
-  const port = import.meta.env.VITE_PORT;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -35,11 +34,7 @@ function TherapyPage() {
     };
 
     try {
-      const response = await axios.post(
-        `${url}:${port}/gethelp`,
-        submissionData
-      );
-
+      const response = await postUser(submissionData);
       console.log("Submission response:", response.data);
 
       // Clear the form
@@ -51,6 +46,8 @@ function TherapyPage() {
     } catch (error) {
       console.error("Error submitting data:", error);
     }
+
+    return <GroupPage name={name} id={groupId} />;
   };
 
   return (
