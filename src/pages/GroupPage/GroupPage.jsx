@@ -5,7 +5,6 @@ import "./GroupPage.scss";
 
 function GroupPage() {
   const { id } = useParams();
-  console.log("params are ", id);
   const [group, setGroup] = useState({});
 
   const fetchWarehouses = async () => {
@@ -21,15 +20,18 @@ function GroupPage() {
 
   return (
     <div className="group">
-      <p className="group__welcome">
-        Welcome! We are so glad to have you join the {group.group} group therapy
-        sessions. This is a safe and supportive spave where you can connect with
-        others who share similar experiences, and access the support of an
-        experienced therapist. We understand that facing personal challenges can
-        be difficult, and we are here to help you navigate this journey
-        together. Please reach out to our support team if you have any questions
-        or concerns.
-      </p>
+      <section className="group__intro">
+        <p className="group__welcome">Welcome!</p>
+        <p className="group__welcome">
+          We are so glad to have you join the {group.group} group therapy
+          sessions. This is a safe and supportive spave where you can connect
+          with others who share similar experiences, and access the support of
+          an experienced therapist. We understand that facing personal
+          challenges can be difficult, and we are here to help you navigate this
+          journey together. Please reach out to our support team if you have any
+          questions or concerns.
+        </p>
+      </section>
 
       <h2 className="group__group">Your Group:</h2>
 

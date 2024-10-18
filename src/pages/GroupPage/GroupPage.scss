@@ -1,0 +1,21 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.group {
+  padding: 3rem;
+  color: #0067a5;
+  font-family: "BellFonts";
+  &__intro {
+    width: 50%;
+    padding: 2rem 0 3rem;
+    font-size: 1.3rem;
+  }
+  &__welcome {
+    padding: 0.5rem 0;
+  }
+  &__group {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+}

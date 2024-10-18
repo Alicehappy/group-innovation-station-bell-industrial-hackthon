@@ -46,7 +46,7 @@ function TherapyPage() {
       setConcern("");
       setGroup("");
 
-      navigate(`/group/${groupId}}`);
+      navigate(`/group/${groupId}`);
     } catch (error) {
       console.error("Error submitting data:", error);
     }
