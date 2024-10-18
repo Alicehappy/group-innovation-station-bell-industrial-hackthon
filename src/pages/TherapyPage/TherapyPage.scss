@@ -1,114 +1,86 @@
-// Variables
-$primary-color: #0067a5;
-$white-color: #ffffff;
-$border-radius: 5px;
-$box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/animations" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+
+.get {
+  font-weight: 700;
+}
+
+.anilogo img {
+  width: 19rem;
+  padding-top: 8rem;
+  border-radius: 18px;
+}
 
 // Mobile-first styles
 .employee-form {
-  background-color: $white-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  padding: 1.5rem;
-  max-width: 90%; // For mobile view, full-width form with margins
-  margin: 1.5rem auto;
-  font-family: Arial, sans-serif;
+  height: 100vh;
+  background: linear-gradient(90deg, #0067a5, #5271ff);
 
-  &__title {
-    color: $primary-color;
-    font-size: 1.6rem; // Smaller font size for mobile
-    text-align: center;
-    margin-bottom: 1rem;
+  @include tablet {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__help {
+    display: none;
+    color: white;
+
+    @include tablet {
+      margin-top: 1rem;
+      display: unset;
+      font-size: x-large;
+      width: 50%;
+      padding: 0 5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
   }
 
   &__container {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
+    color: white;
+    padding: 1rem;
+
+    @include tablet {
+      width: 50%;
+      padding: 1rem 4rem;
+    }
+
+    @include desktop {
+      width: 50%;
+      padding: 1rem 12rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
   }
 
   &__label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: $primary-color;
+    padding: 0.5rem 0;
   }
 
-  &__input,
-  &__textarea,
-  &__select {
-    padding: 0.7rem; // Comfortable padding for touch devices
-    border: 1px solid #ccc;
-    border-radius: $border-radius;
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem; // Smaller text for mobile
-
-    &:focus {
-      outline: none;
-      border-color: $primary-color;
-      box-shadow: 0 0 5px rgba(0, 103, 165, 0.5);
-    }
+  &__input {
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    padding: 1rem;
+    color: rgb(69, 69, 69);
   }
 
   &__submit {
-    background-color: $primary-color;
-    color: $white-color;
+    margin-top: 1rem;
+    border-radius: 20px;
     border: none;
-    padding: 0.7rem;
-    border-radius: $border-radius;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken($primary-color, 10%);
-    }
-  }
-}
-
-// Media queries for larger screens
-@media screen and (min-width: 768px) {
-  .employee-form {
-    max-width: 600px; // Wider form for tablets
-    padding: 2rem;
-
-    &__title {
-      font-size: 1.8rem; // Larger title
-      margin-bottom: 1.5rem;
-    }
-
-    &__input,
-    &__textarea,
-    &__select {
-      font-size: 1rem;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-    }
-
-    &__submit {
-      font-size: 1.1rem;
-      padding: 0.8rem;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .employee-form {
-    max-width: 800px; // Wider form for desktop
-    padding: 2.5rem;
-
-    &__title {
-      font-size: 2rem; // Even larger title for desktop
-    }
-
-    &__input,
-    &__textarea,
-    &__select {
-      font-size: 1.1rem; // Larger input fields for readability
-      padding: 1rem;
-    }
-
-    &__submit {
-      font-size: 1.2rem;
-      padding: 1rem;
-    }
+    height: 35px;
   }
 }
