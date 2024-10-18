@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import BlogSection from "../../components/BlogSection/BlogSection";
+import ExpertSection from "../../components/ExpertSection/ExpertSection";
 
 const PUBLIC_URL = import.meta.env.VITE_PUBLIC_URL;
 
@@ -60,12 +62,13 @@ function Home() {
           image={`${PUBLIC_URL}/images/Bell-giving.jpg`}
         />
       </Carousel>
-
+      <ExpertSection />
       {testimonials ? (
         <Testimonials testimonials={testimonials} />
       ) : (
         <Loading />
       )}
+      <BlogSection />
     </div>
   );
 }

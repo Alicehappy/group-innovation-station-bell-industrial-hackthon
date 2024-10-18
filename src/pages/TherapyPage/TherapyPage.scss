@@ -8,10 +8,28 @@
   font-weight: 700;
 }
 
+.get-touch {
+  text-align: center;
+  font-weight: 300;
+}
+
+.anilogo {
+  display: flex;
+  flex-direction: column;
+}
+
+.anilogo-img {
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+}
+
+.anilogo-gif {
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+}
+
 .anilogo img {
   width: 19rem;
-  padding-top: 8rem;
-  border-radius: 18px;
 }
 
 // Mobile-first styles
@@ -70,10 +88,11 @@
 
   &__input {
     border-radius: 10px;
+    font-weight: 400;
     border: none;
     background-color: rgb(255, 255, 255);
     height: 30px;
-    padding: 1rem;
+    padding: 0 .5rem;
     color: rgb(69, 69, 69);
   }
 

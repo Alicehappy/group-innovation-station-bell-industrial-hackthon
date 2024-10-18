@@ -4,6 +4,7 @@
 @use '../../styles/partials/typography' as *;
 @use '../../styles/partials/variables' as *;
 
+
 .hero {
     height: 25vh;
     display: flex;
@@ -18,7 +19,8 @@
     }
 
     p {
-        font-size: 1.5rem;
+        max-width: 30rem;
+        font-size: 1rem;
         margin-bottom: 20px;
     }
 

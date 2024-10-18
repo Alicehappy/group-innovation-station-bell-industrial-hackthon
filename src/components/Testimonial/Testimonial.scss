@@ -32,6 +32,7 @@
   }
 
   &__details-wrapper {
+    color: rgb(79, 79, 79);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -45,6 +46,7 @@
 
   &__details {
     &--name {
+      color: black;
       font-weight: 600;
       width: 50%;
       margin: 0;
@@ -61,6 +63,7 @@
     &--comment {
       margin: 0;
       font-style: italic;
+
       @include desktop {
         padding-top: $size-default * 0.4;
       }

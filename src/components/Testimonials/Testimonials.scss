@@ -1,10 +1,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .testimonial-list {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-
-  @include responpsive-margin;
+  padding: 1rem;
 }
