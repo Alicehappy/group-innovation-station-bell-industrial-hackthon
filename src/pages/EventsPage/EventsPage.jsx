@@ -18,8 +18,9 @@ const EventsPage = () => {
 
   return (
     <div className="events">
-      <h1 className="events__title">Upcoming Events</h1>
+
       <div className="events__list">
+        <h1 className="events__title">Upcoming Events</h1>
         {events.map((event) => (
           <div className="events-cards" key={event.id}>
             <h2 className="events__card-title">{event.name}</h2>

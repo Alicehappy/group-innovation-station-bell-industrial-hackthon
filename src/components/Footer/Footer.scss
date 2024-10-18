@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: map-get($colors-primary, global-background);
+  background: linear-gradient(90deg, #0067a5, #5271ff);
   height: $size-default * 8;
   color: map-get($colors-primary, global-white);
 

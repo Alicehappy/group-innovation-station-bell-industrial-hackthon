@@ -4,37 +4,37 @@
 
 
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-    margin: 0;
-  }
+  box-sizing: border-box;
+}
 
-  #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  body {
-    font-family: "BellsFonts", sans-serif;
-    color: map-get($colors-primary, global-text);
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  button:hover {
-    cursor: pointer;
-  }
-  
-  ol,
-  ul {
-    list-style: none;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  font-family: "BellsFonts", sans-serif;
+  color: map-get($colors-primary, global-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+}
