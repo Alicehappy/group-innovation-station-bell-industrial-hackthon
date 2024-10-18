@@ -8,9 +8,14 @@
   font-weight: 700;
 }
 
+.get-touch {
+  text-align: center;
+  font-weight: 300;
+}
+
 .anilogo img {
   width: 19rem;
-  padding-top: 8rem;
+  padding-top: 2rem;
   border-radius: 18px;
 }
 
@@ -70,10 +75,11 @@
 
   &__input {
     border-radius: 10px;
+    font-weight: 400;
     border: none;
     background-color: rgb(255, 255, 255);
     height: 30px;
-    padding: 1rem;
+    padding: 0 .5rem;
     color: rgb(69, 69, 69);
   }
 

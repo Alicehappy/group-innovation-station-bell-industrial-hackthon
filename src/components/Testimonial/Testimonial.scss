@@ -11,9 +11,6 @@
   border-radius: $size-tiny * 2;
   margin-bottom: $size-tiny * 2;
 
-  @include desktop {
-    padding: $size-default * 1.5 0;
-  }
 
   &__avatar {
     background-size: $size-default * 4;
@@ -32,6 +29,7 @@
   }
 
   &__details-wrapper {
+    color: rgb(79, 79, 79);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -45,6 +43,7 @@
 
   &__details {
     &--name {
+      color: black;
       font-weight: 600;
       width: 50%;
       margin: 0;
@@ -61,6 +60,7 @@
     &--comment {
       margin: 0;
       font-style: italic;
+
       @include desktop {
         padding-top: $size-default * 0.4;
       }

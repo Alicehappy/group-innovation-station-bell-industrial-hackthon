@@ -8,13 +8,15 @@ function Testimonials({ testimonials }) {
     ...testimonial,
     avatarUrl: avatarImageUrls[index],
   }));
-  
+
   return (
-    <ul className="testimonial-list">
-      {combineArray.map((testimonial, index) => {
-        return <Testimonial key={index} testimonial={testimonial} />;
-      })}
-    </ul>
+    <div className="testimonial">
+      <h1 className="testimonial-head">Real Experiences, Real Stories</h1>
+      <ul className="testimonial-list">
+        {combineArray.map((testimonial, index) => {
+          return <Testimonial key={index} testimonial={testimonial} />;
+        })}
+      </ul></div>
   );
 }
 

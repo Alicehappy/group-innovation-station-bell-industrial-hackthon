@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Error from "../../components/Error/Error";
 import Loading from "../../components/Loading/Loading";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import BlogSection from "../../components/BlogSection/BlogSection";
 
 function Home() {
   const [testimonials, setTestimonials] = useState([]);
@@ -60,8 +61,8 @@ function Home() {
           image="../../src/assets/images/Bell-giving.jpg"
         />
       </Carousel>
-
-      {testimonials ? <Testimonials testimonials={testimonials} /> : <Loading/>}
+      <BlogSection />
+      {testimonials ? <Testimonials testimonials={testimonials} /> : <Loading />}
     </div>
   );
 }

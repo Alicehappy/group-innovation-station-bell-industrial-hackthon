@@ -59,13 +59,14 @@ function TherapyPage() {
   return (
     <div className="employee-form">
       <div className="employee-form__help">
-        <p className="get">Get In Touch With Us</p>
+        <p className="get">Welcome to Employee Care!        </p>
+        <p className="get-touch">Book a group session today with one of our mental health experts today</p>
         <div className="anilogo">
           <img src={bellGif} alt="Animated Bell Logo"></img>
         </div>
       </div>
       <div className="employee-form__container">
-        <h2 className="employee-form__title">Employee Form</h2>
+        <h2 className="employee-form__title">Reserve your spot today!</h2>
         <form onSubmit={handleSubmit} className="employee-form__form">
           <label className="employee-form__label" htmlFor="employeeId">
             Employee ID:
