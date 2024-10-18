@@ -57,78 +57,80 @@ function TherapyPage() {
 
   return (
     <div className="employee-form">
-      <h2 className="employee-form__title">Employee Form</h2>
-      <form onSubmit={handleSubmit} className="employee-form__container">
-        <label className="employee-form__label" htmlFor="employeeId">
-          Employee ID:
-        </label>
-        <input
-          className="employee-form__input"
-          type="text"
-          id="employeeId"
-          name="employeeId"
-          value={employeeId}
-          onChange={(e) => setEmployeeId(e.target.value)}
-        />
+      <div className="employee-form__container">
+        <h2 className="employee-form__title">Employee Form</h2>
+        <form onSubmit={handleSubmit} className="employee-form__form">
+          <label className="employee-form__label" htmlFor="employeeId">
+            Employee ID:
+          </label>
+          <input
+            className="employee-form__input"
+            type="text"
+            id="employeeId"
 
-        <label className="employee-form__label" htmlFor="name">
-          Name:
-        </label>
-        <input
-          className="employee-form__input"
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+            name="employeeId"
+            value={employeeId}
+            onChange={(e) => setEmployeeId(e.target.value)}
+          />
 
-        <label className="employee-form__label" htmlFor="jobTitle">
-          Job Title:
-        </label>
-        <input
-          className="employee-form__input"
-          type="text"
-          id="jobTitle"
-          name="jobTitle"
-          value={jobTitle}
-          onChange={(e) => setJobTitle(e.target.value)}
-        />
+          <label className="employee-form__label" htmlFor="name">
+            Name:
+          </label>
+          <input
+            className="employee-form__input"
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
 
-        <label className="employee-form__label" htmlFor="concern">
-          Concern:
-        </label>
-        <textarea
-          className="employee-form__input"
-          id="concern"
-          name="concern"
-          value={concern}
-          onChange={(e) => setConcern(e.target.value)}
-        />
+          <label className="employee-form__label" htmlFor="jobTitle">
+            Job Title:
+          </label>
+          <input
+            className="employee-form__input"
+            type="text"
+            id="jobTitle"
+            name="jobTitle"
+            value={jobTitle}
+            onChange={(e) => setJobTitle(e.target.value)}
+          />
 
-        <label className="employee-form__label" htmlFor="group">
-          Group:
-        </label>
-        <select
-          className="employee-form__input"
-          id="group"
-          name="group"
-          value={group}
-          onChange={(e) => setGroup(e.target.value)}
-        >
-          <option value="">Select a group</option>
-          <option value="Work Stress">Work Stress</option>
-          <option value="Family Issues">Family Issues</option>
-          <option value="Anxiety Management">Anxiety Management</option>
-          <option value="Depression">Depression</option>
-          <option value="Self-Esteem & Confidence">
-            Self-Esteem & Confidence
-          </option>
-        </select>
+          <label className="employee-form__label" htmlFor="concern">
+            Concern:
+          </label>
+          <textarea
+            className="employee-form__input"
+            id="concern"
+            name="concern"
+            value={concern}
+            onChange={(e) => setConcern(e.target.value)}
+          />
 
-        <input className="employee-form__submit" type="submit" value="Submit" />
-      </form>
-    </div>
+          <label className="employee-form__label" htmlFor="group">
+            Group:
+          </label>
+          <select
+            className="employee-form__input"
+            id="group"
+            name="group"
+            value={group}
+            onChange={(e) => setGroup(e.target.value)}
+          >
+            <option value="">Select a group</option>
+            <option value="Work Stress">Work Stress</option>
+            <option value="Family Issues">Family Issues</option>
+            <option value="Anxiety Management">Anxiety Management</option>
+            <option value="Depression">Depression</option>
+            <option value="Self-Esteem & Confidence">
+              Self-Esteem & Confidence
+            </option>
+          </select>
+
+          <input className="employee-form__submit" type="submit" value="Submit" />
+        </form>
+      </div></div>
   );
 }
 
