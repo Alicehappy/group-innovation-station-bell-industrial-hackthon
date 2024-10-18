@@ -1,5 +1,3 @@
-// In EventsPage.jsx
-import React from 'react';
 import './EventsPage.scss';
 import Card from '../../components/Card/Card';
 
