@@ -1,0 +1,23 @@
+$min-tablet-breakpoint: 48rem;
+$min-desktop-breakpoint: 80rem;
+
+$colors-primary: (
+    global-background: #0067a5,
+    global-white: #ffffff,
+);
+
+$size-default: 1rem;
+$size-tiny: 0.25rem;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: map-get($colors-primary, global-background);
+    color: map-get($colors-primary, global-text);
+}
+
+h1,
+h2,
+h3 {
+    color: map-get($colors-primary, global-text);
+}
